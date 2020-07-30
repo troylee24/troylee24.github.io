@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>My Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Back Home</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li class="active"><a href="projects.html">Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/troylee24/" target = "_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/troylee24" target = "_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Projects</h1>
+									<div class="btn-group" style="width:100%">
+										<a href="#Astro" style="margin-bottom: 0.5%" class="button primary icon solid fa-search">Astro</a>
+										<a href="#Hoverquad" style="margin-bottom: 0.5%" class="button primary icon solid fa-search">Hoverquad</a>
+										<a href="#Pacman" style="margin-bottom: 0.5%" class="button primary icon solid fa-search">Pacman</a>
+										<a href="#Gomoku AI" style="margin-bottom: 0.5%" class="button primary icon solid fa-search">Gomoku AI</a>
+										<a href="#S-Ring" style="margin-bottom: 0.5%" class="button primary icon solid fa-search">S-Ring</a>
+										<a href="#Lone" style="margin-bottom: 0.5%" class="button primary icon solid fa-search">Lone</a>
+									</div>
+								</header>
+								<hr />
+								
+								<!-- Image -->
+									<!-- Astro -->
+									<h2><a id = "Astro"></a>Astro</h2>
+									<span class="image right"><img src="images/astro4.png" alt="" /></span>
+									<h6><a href="https://and-one.itch.io/astro" target="_blank" class="button small">Play it Here!</a></h6>
+									<p>Astro is a top-down space shooter developed in the Godot game engine. All assets were provided by generous online users with the permission to use in non-commercial projects. This project was finished independently over the summer of 2020. The in-built scripting language, GDScript, shares noticeable similarities with the popular Python language (i.e. using colons instead of brackets, no required semicolons, etc.). It is built around a node-based system in which each component of the game (i.e. player,enemies, world) are represented as root nodes with children nodes, reminiscent of C++ and the usage of pointers.</p>
+									<span class="image left"><img src="images/astro3.png" alt="" /></span>
+									<p>The game begins with a menu screen with an interactive UI. Starting the game will bring the player to a custom dialogue scene in which the player is told about their duty to fight off an alien invasion. For 5 thirty-second rounds, the player is tasked with surviving. The main feature of Astro is the usage of a 4-weapon loadout, from a 12-weapon arsenal, which changes every round. Using google sheets, I tried my best to balance the different advantages of each gun - bullet speed, gun delay, and damage - by comparing the average weight of each attribute. Unfortunately, once the game was released, I received feedback about certain weapons being overpowered and some being unusable. It's a project that really tested my debugging skills and is a project I still continue to refine today.</p>
+									<hr />
+
+									<!-- Hoverquad -->
+									<h2><a id = "Hoverquad"></a>Hoverquad</h2>
+									<span class="image right"><img src="images/hoverquad.jpg" alt="" /></span>
+									<h6><a href="pdfs/ECE Proposal.pdf" target="_blank" class="button small">Project Document</a></h6>
+									<p>The Hoverquad is a drone-like automotive that functions using four brushless motors. Unlike a regular drone, it's main function is to "hover" by continously correcting itself until equilibrium, using the calculations of yaw, pitch, and roll. Our method of control was to interface with an Adafruit Feather M0 Bluefruit LE in order to make inputs via bluetooth. Communicating with the Feather using pulse-width modulation allowed the motors to understand how much throttle would be needed. In conjunction, we gathered data from the MPU-6050's accelerometer and gyroscope functions to ensure that the device wouldn't exceed a 5-degree angle when turning.</p>
+									<hr />
+
+									<!-- Pacman -->
+									<h2><a id = "Pacman"></a>Pacman</h2>
+									<span class="image right"><img src="images/pacman1.png" alt="" /></span>
+									<h6><a href="https://sites.google.com/view/ece153b-project-tl-sm/home" target="_blank" class="button small">Project Website</a></h6>
+									<p>The main hardware components of this project were an STM32L4 discovery board, a Wii nunchuk, a Wii Nunchucky, and an HC-05 Bluetooth Module. The general concept was to emulate keypresses on the keyboard by using a nunchuk. These keypresses were then used to play a custom Pacman-type game that was coded in python. The process went as follows: 
+									<ol>
+										<li>read inputs from the Wii nunchuk by interfacing with the STM32L4 via I2C (serial protocol)</li>
+										<li>translate those inputs into human-logic (i.e. "left", "right", "up", "down") by interfacing with <a href="https://www.compuphase.com/software_termite.htm" target="_blank">Termite</a>, an RS232 terminal via UART, by printing words to a serial com port.</li>
+										<li>use a python script in order to read from the serial com port and convert them into keypress commands</li>
+										<li>and finally, create and play the custom pacman game with the nunchuk!</li>
+									</ol>
+									</p>
+									<hr />
+
+									<!-- Gomoku AI -->
+									<h2><a id = "Gomoku AI"></a>Gomoku AI</h2>
+									<span class="image right"><img src="images/gomoku.png" alt="" /></span>
+									<p><i>Disclaimer: Unfortunately as it was a class assignment, I cannot post the source code.</i></p>
+									<p>The concept was simply to create an AI to beat a baseline AI program in a game of Gomoku. Conditions of implementing a successful AI were on the requirement that it would win at least 7/10 times against the baseline. The main behavior of the AI was based on the mini-maxing algorithm. In this algorithm, the AI gathers information about all the possible states of the board after "x" amount of turns (i.e. 2 turns would mean the enemy made one move and the player made one move)
+									</p>
+									<p>Using a custom heuristic function, the AI would be able to then determine what board was the most optimized for each player (i.e. a board with four-in-a-row is more valuable than one with only three-in-a-row). From the perspective of the player A.I., you would want to "maximize" the board and conversely, from the perspective of the enemy AI, they would want to "minimize" the board.With this in mind, the AI would then backtrack from each predicted future and min/max based on whose turn it was to eventually reach the original board with a mathematical evaluation of each path. It is important to note that the algorithm assumes that the enemy player is playing optimally.
+									</p>
+									<p>This project was very eye-opening to the world of artifical intelligence. While a very small sample size, I felt that it gave me a better understanding of both the complications of A.I. and the infinite potential of A.I. Larger-scale concepts such as the self-driving car brings about questions regarding the risk-and-reward model. While conceptually the idea is sound, it's also obvious that there are an endless amount of situations that an automated vehicle could face. To slightly go off topic, I recently took a class by the name of ENGR101 in which we discussed the "programmable ethics" of a car. For example, when a car is unable to stop and there are people both directly in front and to the sides of the car, what decision will the engineers choose? It becomes a matter of programming the decision to sacrifice one over the other; a decision that can change the perception on ethics and morality.
+									</p>
+									<hr />
+
+									<!-- S-Ring -->
+									<h2><a id = "S-Ring"></a>S-Ring</h2>
+									<span class="image right"><img src="images/s-ring.png" alt="" /></span>
+									<h6><a href="pdfs/S-Ring Final Draft.pdf" target="_blank" class="button small">Product Research Paper</a></h6>
+									<p>The S-Ring was a product conceptualized in 2018 for the purpose of simulating a mock product proposal to a company. Our collective was "Caelum" and we found a deep issue within the usage of outer space as a garbage disposal. In all sizes, space debris can prove to be deadly for active space vehicles; even small specks can cause major damage in the structure of a ship if the specks attain an extremely high velocity. However, our group felt that it was more urgent to tackle the larger abandoned satellites that were left orbiting earth.
+									</p>
+									<p>The S-Ring was a potential solution. The design of the vehicle would be oval-ish with an open middle; it was made with the intent of completely surrounding satellites and constricting until the target was clamped in firmly. The product design relied on research for these main components: a power source, a way to track debris location, thrusters, hydraulics, sensors, and a launching mechanism. In the research paper, you will find information on chosen products, other considered options, and scientific reasoning for each decision.</p>
+									<hr />
+
+									<!-- Lone -->
+									<h2><a id = "Lone"></a>Lone (in progress!)</h2>
+									<span class="image right"><img src="images/lone.png" alt="" /></span>
+									<h6><a class="button small"><s>Play it Here!</s></a></h6>
+									<p><i>July 29, 2020.</i> Lone is a game that I am currently working on. It is a 2D-platformer that emphasises player movement. In addition to the conventional "idle", "run", and "jump" states, I have already implemented sliding, wall-climbing, wall-jumping, double-jumping, and an attack combo system (with animations for all). I hope to finish the game logic and the world construction by two or three weeks and finish the user interface and sound mapping by the end of next month (August).</p>
+
+							</section>
+
+							<!-- Footer -->
+							<footer>
+								<div class="pagination">
+									<!--<a href="#" class="previous">Prev</a>-->
+									<a href="index.html" class="page">1</a>
+									<a href="about.html" class="page">2</a>
+									<a href="projects.html" class="page active">3</a>
+								</div>
+							</footer>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p>troylee1955@gmail.com</p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/troylee24/" target = "_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/troylee24" target = "_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; <a href="https://html5up.net">HTML5 UP</a></li><li>Modified by: Troy Lee</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
